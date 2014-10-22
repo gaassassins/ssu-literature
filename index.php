@@ -27,7 +27,7 @@
 </head>
 
 <body id="page-top" class="index">
-
+<?php require_once("connect.php"); ?>
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -359,9 +359,12 @@
                             <p>В сборник включено свыше 4000 задач и упражнений по важнейшим разделам математического анализа: введение в анализ, дифференциальное исчисление функций одной переменной, неопределенный и определенный интегралы, ряды, дифференциальное исчисление функций нескольких переменных, интегралы, зависящие от параметра, кратные и криволинейные интегралы. Почти ко всем задача даны ответы! В приложении помещены ответы. Для студентов физических и механико-математических специальностей высших учебных заведений</p>
                             <p> 13-е изд., испр.- М.: Изд-во Моск. ун-та ЧеРо,1997. - 624с. 
 							
-							$result = mysql_query("SELECT * FROM books",$db);
-$num_rows = mysql_num_rows($result);
-echo $num_rows;</p>
+						<?php 
+                        $result = mysql_query("SELECT * FROM alina228",$db);
+                        $num_rows = mysql_num_rows($result);
+                        echo $num_rows;
+                        ?>
+</p>
 							
                             <ul class="list-inline">
                                 <li>Дата: 1997 год</li>
@@ -452,7 +455,6 @@ echo $num_rows;</p>
 
     <!-- jQuery Version 1.11.0 -->
     <script src="js/jquery-1.11.0.js"></script>
-    <script src="connect.php"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
